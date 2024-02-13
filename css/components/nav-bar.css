@@ -1,0 +1,59 @@
+.nav {
+  background-color: #f9f9fa;
+  padding: 20px 45px;
+  position: fixed;
+  bottom: 0;
+  /*
+    여기까지만 하면 아이콘 하나(ellipsis)가 사라짐!
+    해결할 수 있는 magic line 이 있다!
+    box-sizing:border-box;
+    width: 100%;
+    
+    이 두 가지를 이용하면 해결이 됨. 왜 일까???
+    이유를 블로그에 정리하자.
+    */
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+i {
+  color: #2e363e;
+}
+
+/*
+inline 요소는 width, height 속성 적용이 안됨.
+그리고, margin 과 padding 은 좌우만 적용됨.
+*/
+
+.nav__link {
+  position: relative;
+}
+
+.nav__chat-notify {
+  display: flex;
+  background-color: orangered;
+  width: 23px;
+  height: 23px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: white;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+
+.nav__etc-notify {
+  background-color: orangered;
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  position: absolute;
+  left: 25px;
+}

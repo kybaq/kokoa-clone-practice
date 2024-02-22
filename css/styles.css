@@ -8,8 +8,10 @@
 
 /* Screens */
 @import "./screens/login.css";
+@import "./screens/friends.css";
 
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   height: 100vh;
+  color: #2e363e;
 }

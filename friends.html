@@ -38,6 +38,49 @@
       <i class="fa-solid fa-chevron-right fa-xs"></i>
     </a>
 
+    <!--
+      user-component 를 제작할 건데 
+      프로필 사진 그리고 이름, 경우에 따라서는 알림 등 보여줄 수 있어야함.
+      따라서, div 내부에 2개의 container 를 제작해
+      하나는 프로필 사진과 이름등을 기재, 다른 하나는 알림 등을 표시.
+    -->
+
+    <main class="friends-screen">
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="me.jpg"
+            alt=""
+            class="user-component__avatar user-component__avatar--xl"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">Kim YeongBeom</h4>
+            <!-- <h6 class="user-component__subtitle">Anything u want</h6> -->
+          </div>
+        </div>
+        <div class="user-component__column"></div>
+      </div>
+      <div class="friends-screen__channel">
+        <div class="friends-screen__channel-header">
+          <span>Channel</span> <i class="fa-solid fa-chevron-up fa-xs"></i>
+        </div>      
+        <div class="user-component">
+          <div class="user-component__column">
+            <img src="me.jpg" alt="" class="user-component__avatar user-component__avatar--sm"/>
+            <div class="user-component__text">
+              <h4 class="user-component__title">Kim YeongBeom</h4>
+              <!-- <h6 class="user-component__subtitle">Anything u want</h6> -->
+            </div>
+          </div>
+          <div class="user-component__column">
+            <span>2</span>
+            <i class="fa-solid fa-chevron-right fa-xs"></i>
+          </div>
+        </div>
+      </div>
+      </div>
+    </main>
+
     <!-- 아래 구조를 
       한 번에 작성하고 싶으면
       이렇게 가능함. nav>ul>li*4>a -->

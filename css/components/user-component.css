@@ -1,0 +1,41 @@
+/*
+user-component 내부에 2개의 user-component__column 이 있음.
+이 column 의 내부 content 를 정렬하고 싶으면 추가로 정의해줘야함.
+*/
+.user-component,
+.user-component__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.user-compoent__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+  margin: 10px 15px;
+}
+
+.user-component__title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.user-component__subtitle {
+  margin-top: 7px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+}
+
+.user-component__avatar--xl {
+  width: 70px;
+  height: 70px;
+  border-radius: 25px;
+  margin: 10px 15px;
+}
+
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+  margin: 10px 15px;
+}

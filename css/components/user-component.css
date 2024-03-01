@@ -13,10 +13,10 @@ user-component 내부에 2개의 user-component__column 이 있음.
   justify-content: space-between;
 }
 
-.user-compoent__avatar {
+.user-component__avatar {
   width: 60px;
   height: 60px;
-  border-radius: 25px;
+  border-radius: 20px;
   margin: 10px 15px;
 }
 
@@ -50,5 +50,13 @@ user-component 내부에 2개의 user-component__column 이 있음.
 }
 
 .user-component__column:last-child {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-component__time {
+  margin-bottom: 5px;
+  display: block;
 }

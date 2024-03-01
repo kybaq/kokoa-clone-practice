@@ -36,14 +36,6 @@ inline 요소는 width, height 속성 적용이 안됨.
 }
 
 .nav__chat-notify {
-  display: flex;
-  background-color: orangered;
-  width: 23px;
-  height: 23px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  color: white;
   position: absolute;
   left: 15px;
   bottom: 15px;

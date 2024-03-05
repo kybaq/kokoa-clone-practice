@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats - Kokoa Clone</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <!-- css 방법론, 요소의 이름을 설정할 때 BEM 방식이 있음. https://nykim.work/15 -->
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <i class="fa-solid fa-rotate"></i>
+        <span>100%</span>
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="screen-header">
+      <h1 class="screen-header__title">Find</h1>
+      <div class="screen-header__icons">
+        <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+        <span
+          ><i class="fa-solid fa-gear fa-lg">
+            <span class="screen-header__setting-notify"></span> </i
+        ></span>
+      </div>
+    </header>
+
+    <!--
+      user-component 를 제작할 건데 
+      프로필 사진 그리고 이름, 경우에 따라서는 알림 등 보여줄 수 있어야함.
+      따라서, div 내부에 2개의 container 를 제작해
+      하나는 프로필 사진과 이름등을 기재, 다른 하나는 알림 등을 표시.
+    -->
+
+    <main class="main-screen">
+      <div class="find-icons">
+        <div class="find-icons__icon">
+          <i class="fa-solid fa-qrcode"></i><span>QR Code</span>
+        </div>
+        <div class="find-icons__icon">
+          <i class="fa-regular fa-address-book"></i><span>Add by Contacts</span>
+        </div>
+        <div class="find-icons__icon">
+          <i class="fa-regular fa-id-badge"></i><span>Add by ID</span>
+        </div>
+        <div class="find-icons__icon">
+          <i class="fa-regular fa-envelope"></i><span>Invite</span>
+        </div>
+      </div>
+      <div class="recomended-friends">
+        <h6 class="recomended-friends__title">Recomended Friends</h6>
+        <span>You have no recommended friends.</span>
+      </div>
+      <div class="open-chat">
+        <div class="open-chat__header">
+          <h4 class="">Open Chat</h4>
+          <span
+            >Go to Openchat Home <i class="fa-solid fa-chevron-right fa-xs"></i
+          ></span>
+        </div>
+        <div class="open-post">
+          <div class="open-post__column">
+            <h5 class="open-post__title">#BTS</h5>
+            <h6 class="open-post__hashtag">#bts#army#freiends</h6>
+            <div class="open-post__members">
+                <img src="./me.jpg" alt="" />
+                <span class="open-post__members-count">802 members</span>
+                <div class="divider"></div> 
+                <span class="open-post__members-status">Acitve</span>
+            </div>
+          </div>
+          <div class="open-post__column">
+            <div class="open-post__photo">
+                <img src="./me.jpg" alt="">
+                <div class="open-post__heart-count">
+                    <i class="fa-solid fa-heart fa-xs"></i>
+                    <span>326</span>
+                </div>
+            </div>
+        
+        </div>
+        </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- 아래 구조를 
+      한 번에 작성하고 싶으면
+      이렇게 가능함. nav>ul>li*4>a -->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a href="./friends.html" class="nav__link"
+            ><i class="fa-regular fa-user fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a href="./chats.html" class="nav__link">
+            <span class="nav__chat-notify badge">1</span>
+            <i class="fa-regular fa-comment fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a href="./find.html" class="nav__link"
+            ><i class="fa-solid fa-magnifying-glass fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a href="./more.html" class="nav__link">
+            <div class="nav__etc-notify"></div>
+            <i class="fa-solid fa-ellipsis fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <script
+      src="https://kit.fontawesome.com/933537d04a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

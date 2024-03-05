@@ -13,3 +13,14 @@
 .screen-header__icons span {
   margin-left: 10px;
 }
+
+.screen-header__setting-notify {
+  position: absolute;
+  top: 45px;
+  right: 15px;
+  background-color: orangered;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  color: white;
+}

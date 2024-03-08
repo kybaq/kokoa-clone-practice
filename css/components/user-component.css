@@ -26,6 +26,7 @@ user-component 내부에 2개의 user-component__column 이 있음.
 }
 
 .user-component__subtitle {
+  display: flex;
   margin-top: 7px;
   color: rgba(0, 0, 0, 0.5);
   font-size: 13px;

@@ -1,0 +1,117 @@
+#chat-screen {
+    background-color: #abc1d1;
+    height: 1000vh;
+}
+
+#chat-screen .status-bar {
+    z-index: 2;
+}
+
+#chat-screen .alt-header {
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+    top: 0; /* 두 가지 모두 최상단에 고정하기 위한 속성 */
+    background-color: #abc1d1;
+}
+
+/*
+    z-index 는, layer 의 순서가 몇 번째인지 설정해주는 것.
+    position fixed, display 속성을 정해주면 layer 가 생긴다고 함.
+    larger z-index value means higher order.
+    이것을 사용한 이유는, 현재 채팅방의 날짜 표시 div 가
+    스크롤 시 사라지는 효과를 만들기 위해서 상태창과 alt-header 모두 
+    bg-color, position: fixed 를 넣었기에 layer 순서를 정해
+    원하는 대로 요소들이 표현될 수 있게 설정해준 것임.
+*/
+
+
+.main-chat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 110px;
+}
+
+.chat__timestamp {
+    color: white;
+    background-color: #92a4b2;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.message-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.message-row img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message__author {
+    display: block;
+    opacity: 0.8;
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+
+.message__bubble {
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 13px;
+    border-top-left-radius: 0px;
+    margin-right: 6px;
+    font-size: 16px;
+}
+
+.message__info {
+    display: flex;
+    align-items: flex-end;
+}
+
+.message_time {
+    opacity: 0.8;
+}
+
+.message-row--own {
+    justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+    background-color: #fce101;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 13px;
+    margin-left: 6px;
+    /* order: 1; */
+}
+
+.message-row--own .message__info {
+    flex-direction: row-reverse;
+}
+
+
+
+/*
+    현재 상황에서, own message 와 time 의 순서를 바꾸고 싶은 상황!
+    html tag 의 위치를 바꾸지 말고, css 속성을 이용하자.
+    이들의 부모 container(message-row) 는 flex 인데,
+    flex children 에게는 order 라는 속성이 존재함.
+    이것을 통해 flex container 내부의 요소 간 순서 변경이 가능함!
+    작은 값일 수록 먼저 나타남.
+*/
+
+/*
+    사실 그것보다 더 간단한 건 message__info 의 flex-direction 변경이 있다!
+*/

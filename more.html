@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More - Kokoa Clone</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <!-- css 방법론, 요소의 이름을 설정할 때 BEM 방식이 있음. https://nykim.work/15 -->
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <i class="fa-solid fa-rotate"></i>
+        <span>100%</span>
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="screen-header">
+      <h1 class="screen-header__title">More</h1>
+      <div class="screen-header__icons">
+        <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+        <span><i class="fa-solid fa-music fa-lg"></i></span>
+        <span><a href="./setting.html"><i class="fa-solid fa-gear fa-lg">
+            <span class="screen-header__setting-notify"></span></i>
+        </a></span>
+      </div>
+    </header>
+
+    <!--
+      user-component 를 제작할 건데 
+      프로필 사진 그리고 이름, 경우에 따라서는 알림 등 보여줄 수 있어야함.
+      따라서, div 내부에 2개의 container 를 제작해
+      하나는 프로필 사진과 이름등을 기재, 다른 하나는 알림 등을 표시.
+    -->
+
+    <main class="main-screen more-screen">
+        <div class="user-component">
+          <div class="user-component__column">
+            <img
+              src="me.jpg"
+              alt=""
+              class="user-component__avatar user-component__avatar"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title">Kim YeongBeom</h4>
+              <h6 class="user-component__subtitle">
+                +82 787-493-4219 <div class="circle-exclamation">!</div>
+              </h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <i class="fa-regular fa-message fa-lg"></i>
+          </div>
+        </div>
+        <div class="icon-row">
+            <div class="icon-row__icon">
+                <i class="fa-regular fa-calendar"></i><span>Calendar</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fa-regular fa-hard-drive"></i><span>Talk Drive</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fa-regular fa-face-smile"></i><span>Emoticons</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fa-solid fa-pen-nib"></i></i><span>Themes</span>
+            </div>
+        </div>
+
+        <div class="icon-row">
+            <div class="icon-row__icon">
+                <i class="fa-regular fa-user"></i><span>Account</span>
+            </div>
+            <div class="icon-row__icon">
+                <i class="fa-regular fa-envelope"></i><span>Openchat</span>
+            </div>
+            <div class="icon-row__icon">
+            </div>
+            <div class="icon-row__icon">
+            </div>
+        </div>
+        <div class="more-suggestions">
+            <h4 class="more-suggestions__title">
+                Suggestions
+            </h4>
+            <div class="more-suggestions__icons">
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <div class="more-suggestions__icon-text">
+                        KoKoa Story
+                    </div>
+                </div>
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <div class="more-suggestions__icon-text">
+                        kakao friends
+                    </div>
+                </div>
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-image">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <div class="more-suggestions__icon-text">
+                        Friends Gem
+                    </div>
+                </div>
+                <div class="more-suggestions__icon">
+                    <div class="more-suggestions__icon-empty">
+                    </div>
+                    <div class="more-suggestions__icon-text">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </main>
+
+    <!-- 아래 구조를 
+      한 번에 작성하고 싶으면
+      이렇게 가능함. nav>ul>li*4>a -->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a href="./friends.html" class="nav__link"
+            ><i class="fa-regular fa-user fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a href="./chats.html" class="nav__link">
+            <span class="nav__chat-notify badge">1</span>
+            <i class="fa-regular fa-comment fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a href="./find.html" class="nav__link"
+            ><i class="fa-solid fa-magnifying-glass fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a href="./more.html" class="nav__link">
+            <div class="nav__etc-notify"></div>
+            <i class="fa-solid fa-ellipsis fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <script
+      src="https://kit.fontawesome.com/933537d04a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

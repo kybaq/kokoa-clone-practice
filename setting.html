@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chats - Kokoa Clone</title>
+    <title>Setting - Kokoa Clone</title>
   </head>
   <body>
     <div class="status-bar">
@@ -24,50 +24,48 @@
       </div>
     </div>
 
-    <header class="screen-header">
-      <h1 class="screen-header__title">Chats</h1>
-      <div class="screen-header__icons">
-        <span><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
-        <span><i class="fa-brands fa-rocketchat fa-lg"></i></span>
-        <span><i class="fa-solid fa-music fa-lg"></i></span>
-        <span><a href="./setting.html"><i class="fa-solid fa-gear fa-lg"></i></a></span>
-      </div>
+    <header class="alt-header">
+        <div class="alt-header__column">
+          <a href="./more.html">
+            <i class="fa-solid fa-angle-left fa-2x"></i>
+          </a>
+        </div>
+        <div class="alt-header__column">
+            <h1 class="alt-header__title">Setting</h1>
+        </div>
+        <div class="alt-header__column">
+            <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+            <!-- <i class="fa-solid fa-bars fa-2x"></i> -->
+        </div>
     </header>
 
-    <!--
-      user-component 를 제작할 건데 
-      프로필 사진 그리고 이름, 경우에 따라서는 알림 등 보여줄 수 있어야함.
-      따라서, div 내부에 2개의 container 를 제작해
-      하나는 프로필 사진과 이름등을 기재, 다른 하나는 알림 등을 표시.
-    -->
-
     <main class="main-screen">
-      <a href="./chat.html">
-      <div class="user-component">
-        <div class="user-component__column">
-          <img
-            src="me.jpg"
-            alt=""
-            class="user-component__avatar user-component__avatar"
-          />
-          <div class="user-component__text">
-            <h4 class="user-component__title">KokoaTalk</h4>
-            <h6 class="user-component__subtitle">
-              Please check your Kokoa Acoount Info
-            </h6>
+      <ul class="settings-list">
+        <li class="settings-setting">
+          <div class="settings-setting-column">
+            <i class="fa-solid fa-bullhorn"></i>
+            <span>Notices</span>
           </div>
-        </div>
-        <div class="user-component__column">
-          <span class="user-component__time">21:22</span>
-          <span class="badge">1</span>
-        </div>
-      </div>
-      </a>
+          <div class="settings-setting-column"></div>
+        </li>
+        <li class="settings-setting">
+          <div class="settings-setting-column">
+            <i class="fa-solid fa-flask"></i>
+            <span>KaKao Lab</span>
+          </div>
+          <div class="settings-setting-column"></div>
+        </li>
+        <li class="settings-setting">
+          <div class="settings-setting-column">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Version</span>
+          </div>
+          <div class="settings-setting-column opacity-07">Latest Version</div>
+        </li>
+      </ul>
     </main>
 
-    <!-- 아래 구조를 
-      한 번에 작성하고 싶으면
-      이렇게 가능함. nav>ul>li*4>a -->
+
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__btn">
@@ -78,7 +76,7 @@
         <li class="nav__btn">
           <a href="./chats.html" class="nav__link">
             <span class="nav__chat-notify badge">1</span>
-            <i class="fa-solid fa-comment fa-2x"></i
+            <i class="fa-regular fa-comment fa-2x"></i
           ></a>
         </li>
         <li class="nav__btn">

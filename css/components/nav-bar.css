@@ -62,7 +62,8 @@ inline 요소는 width, height 속성 적용이 안됨.
   height: 5px;
   border-radius: 2.5px;
   position: absolute;
-  left: 25px;
+  left: 30px;
+  bottom: 25px;
 }
 
 @keyframes appearBtnsAnimation {

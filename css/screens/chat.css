@@ -1,6 +1,6 @@
 #chat-screen {
     background-color: #abc1d1;
-    height: 1000vh;
+    height: 300vh;
 }
 
 #chat-screen .status-bar {
@@ -30,6 +30,56 @@
     원하는 대로 요소들이 표현될 수 있게 설정해준 것임.
 */
 
+@keyframes timestamp-fadeIn {
+    0% {
+        transform: none;
+        opacity: 0;
+    }
+
+    1% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes message-fadeIn {
+    0% {
+        transform: none;
+        opacity: 0;
+    }
+
+    1% {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes message-own-fadeIn {
+    0% {
+        transform: none;
+        opacity: 0;
+    }
+
+    1% {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
 
 .main-chat {
     display: flex;
@@ -45,12 +95,14 @@
     border-radius: 30px;
     font-size: 15px;
     margin-bottom: 25px;
+    animation: timestamp-fadeIn 0.5s ease forwards;
 }
 
 .message-row {
     display: flex;
     width: 100%;
     margin-bottom: 25px;
+    animation: message-fadeIn 0.5s ease forwards;
 }
 
 .message-row img {
@@ -87,6 +139,7 @@
 
 .message-row--own {
     justify-content: flex-end;
+    animation: message-own-fadeIn 0.5s ease forwards;
 }
 
 .message-row--own .message__bubble {
@@ -116,7 +169,7 @@
 
 .reply {
     position: fixed;
-    bottom: 5px;
+    bottom: 0;
     width: 100%;
     background-color: white;
     display: flex;
@@ -124,41 +177,67 @@
     padding: 5px 25px;
     box-sizing: border-box;
     align-items: center;
-  }
-  
-  .reply .reply__column:first-child {
+    transition: all 0.4s ease;
+}
+
+.reply .reply__column:first-child {
     width: 5%;
-  }
-  .reply .reply__column:last-child {
-      position: relative;
+}
+
+.reply .reply__column:last-child {
+    position: relative;
     width: 95%;
-  }
-  
-  .reply input {
+}
+
+.reply input {
     padding: 14px;
     width: 100%;
     border: var(--main-border);
     border-radius: 25px;
     box-sizing: border-box;
-  }
-  
-  .reply__column:last-child > i,
-  .reply__column:last-child button {
+    transition: all 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
     position: absolute;
     right: 5px;
     top: 5px;
-  }
-  
-  .reply__column:last-child > i {
+}
+
+.reply__column:last-child > i {
     right: 55px;
     top: 15px;
-  }
-  
-  .reply__column button {
+}
+
+.reply__column button {
     background-color: var(--yellow);
     border: none;
     width: 35px;
     height: 35px;
     border-radius: 50%;
-  }
-  
+}
+
+.reply .reply__column:first-child,
+.reply .fa-icons,
+.reply button {
+    transition: opacity 0.4s ease;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-icons,
+.reply:focus-within button {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.reply:focus-within input {
+    width: 97vw;
+    transform: translateX(-5%) translateY(-60px);
+}
+
+.reply:focus-within {
+    transform: translateY(60px);
+}
+
+/* @keyframe 은 animation 을 통해, 그렇지 않으면 transition 사용해주면 된다. */

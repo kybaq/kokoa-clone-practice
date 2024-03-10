@@ -75,7 +75,7 @@
 
 .open-post__photo > img {
   width: 120px;
-  height: 120px;
+  height: 100%;
   border-radius: 10px;
 }
 
@@ -88,11 +88,45 @@
   justify-content: center;
   align-items: center;
   background-color: var(--gray);
-  color: white;
   padding: 5px;
+  color: white;
   border-radius: 20px;
   position: absolute;
   bottom: 10px;
   right: 10px;
   font-size: 13px;
 }
+
+.open-post__heart-count > i {
+  color: white;
+  margin-right: 5px
+}
+
+@keyframes heartBeating {
+  0% {
+    color: white;
+    transform: none;
+  }
+
+  50% {
+    color: crimson;
+    transform: scale(1.5);
+  }
+
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform;
+  animation: heartBeating 1s ease infinite  ;
+}
+
+/* 
+  heartBeating animation 에서 scale 계수를 작게 사용하면 뭔가 아이콘이 흔들리는 것 처럼 보이는 현상이 있었음.
+  will-change 를 통해, 이것을 해결함.
+  will-change 는 브라우저에게 요소의 어떤 것이 변화하는지 명시해줘서 효율적임.
+  또한, 하드웨어 가속을 하게 만들어준다는듯??? --> 유저가 브라우저에서 가속을 안 켜면 쓸모가 없나?
+*/

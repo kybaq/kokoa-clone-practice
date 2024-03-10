@@ -11,14 +11,27 @@
   font-size: 30px;
 }
 
+@keyframes rotateSetting {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-gear:hover {
+  animation: rotateSetting 2s linear infinite;
+}
+
 .screen-header__icons span {
   margin-left: 10px;
 }
 
 .screen-header__setting-notify {
   position: absolute;
-  top: 45px;
-  right: 15px;
+  top: 41px;
+  right: 16px;
   background-color: orangered;
   width: 4px;
   height: 4px;

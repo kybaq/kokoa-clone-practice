@@ -53,6 +53,7 @@ inline 요소는 width, height 속성 적용이 안됨.
   position: absolute;
   left: 15px;
   bottom: 15px;
+  animation: notificationAnimation 2s ease-in-out infinite;
 }
 
 .nav__etc-notify {
@@ -62,7 +63,6 @@ inline 요소는 width, height 속성 적용이 안됨.
   border-radius: 2.5px;
   position: absolute;
   left: 25px;
-  animation: notificationAnimation 2s ease-in-out infinite;
 }
 
 @keyframes appearBtnsAnimation {
